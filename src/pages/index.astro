@@ -1,8 +1,17 @@
 ---
 import Nav from '../components/Nav.astro';
 import Layout from '../layouts/Layout.astro';
+import ContentCard from "../components/ContentWithPost.astro"
 ---
 
-<Layout>
+<Layout title="Inicio" description='Bienvenida al blog'>
 	<Nav />
+	<h2>Nuevas Publicaciones</h2>
+	<ContentCard />
 </Layout>
+<style>
+	h2 {
+		margin-left: 10px;
+	}
+
+</style>

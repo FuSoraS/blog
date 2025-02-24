@@ -3,16 +3,16 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <nav>
-    <div class="first">
+    <a href=`${base}` class="first">
         <img src=`${base}/favicon.svg` alt="" class="logo" />
         <p>Blog Fusoras</p>
-    </div>
+    </a>
     <div class="second">
-        <a href="#" class="center">Inicio</a>
-        <a href="#" class="center">Blog</a>
+        <a href=`${base}` class="center">Inicio</a>
+        <a href=`${base}/blog` class="center">Blog</a>
     </div>
     <div class="third">
-        <a href="#">
+        <a href="/">
             <img src={`${base}/search.svg`} alt="Search Icon" />
         </a>
     </div>

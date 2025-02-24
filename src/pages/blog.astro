@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/Nav.astro'
+import ContentCard from "../components/ContentWithPost.astro"
+---
+<Layout title="Blog" description='Todo el contenido sobre tecnologia'>
+	<Nav />
+	<h2>Todas las publicaciones</h2>
+	<ContentCard />
+</Layout>
+<style>
+	h2 {
+		margin-left: 20px;
+	}
+</style>
