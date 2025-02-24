@@ -1,0 +1,66 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<nav>
+    <div class="first">
+        <img src=`${base}/favicon.svg` alt="" class="logo" />
+        <p>Blog Fusoras</p>
+    </div>
+    <div class="second">
+        <a href="#" class="center">Inicio</a>
+        <a href="#" class="center">Blog</a>
+    </div>
+    <div class="third">
+        <a href="#">
+            <img src={`${base}/search.svg`} alt="Search Icon" />
+        </a>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #333;
+    }
+    .first .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .first, .second, .third {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .second a{
+        position: relative;
+        margin: 10px;
+    }
+    .second a::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #000;
+        transition: width .5s;
+    }
+    .second a:hover::before {
+        width: 100%;
+    }
+    .third a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .first p {
+        margin-left: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+</style>
