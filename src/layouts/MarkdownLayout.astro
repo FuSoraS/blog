@@ -1,25 +1,33 @@
 ---
-import { ClientRouter } from 'astro:transitions';
-import Nav from '../components/Nav.astro';
+import { ClientRouter } from "astro:transitions";
+import Nav from "../components/Nav.astro";
 const { frontmatter } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{frontmatter.title}</title>
-  <ClientRouter />
-</head>
-<body>
-  <Nav />
-  <h1>{frontmatter.title}</h1>
-  <h2>Autor del artículo: {frontmatter.author}</h2>
-  <p>{frontmatter.description}</p>
-  <slot />
-</body>
-<style>
-  body {
-    font-family: 'Montserrat Variable', sans-serif;
-  }
-</style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{frontmatter.title}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <Nav />
+    <article>
+      <h1>{frontmatter.title}</h1>
+      <p>Autor del artículo: {frontmatter.author}</p>
+      <p>{frontmatter.description}</p>
+      <slot />
+    </article>
+  </body><style>
+    body {
+      font-family: "Montserrat Variable", sans-serif;
+    }
+    article {
+      margin: 0 auto;
+      max-width: fit-content;
+      padding: 1rem;
+    }
+  </style>
+</html>
