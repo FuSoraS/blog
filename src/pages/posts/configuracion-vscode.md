@@ -4,6 +4,7 @@ title: 'Configuración de Visual Studio Code'
 author: FuSoraS
 description: 'Configuración de Visual Studio Code'
 date: 2025-02-27
+cover: 'image-vscode.png'
 ---
 ## Abrir el archivo de configuración
 1. Presionar `Ctrl + Shift + p`

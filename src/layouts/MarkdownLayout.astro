@@ -16,6 +16,7 @@ const { frontmatter } = Astro.props;
     <Nav />
     <div id="progress"></div>
     <article>
+      <img src=`/public/${frontmatter.cover}` alt="" class="cover">
       <h1>{frontmatter.title}</h1>
       <p>Autor del artículo: {frontmatter.author}</p>
       <p>{frontmatter.description}</p>
@@ -48,6 +49,10 @@ const { frontmatter } = Astro.props;
       margin: 0 auto;
       max-width: fit-content;
       padding: 1rem;
+    }
+    .cover {
+      width: 100%;
+      max-height: 300px;
     }
   </style>
 </html>
