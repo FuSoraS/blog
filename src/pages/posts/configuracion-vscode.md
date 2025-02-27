@@ -3,12 +3,13 @@ layout: ../../layouts/MarkdownLayout.astro
 title: 'Configuración de Visual Studio Code'
 author: FuSoraS
 description: 'Configuración de Visual Studio Code'
+date: 2025-02-27
 ---
 ## Abrir el archivo de configuración
-1. Precionar `Ctrl + Shift + p`
-2. Escribir: `Open User Settings (JSON)`
-3. Lo elegimos con las flechas del teclado y precionamos enter
-### Archivo de configuración actual 2024-11-23
+1. Presionar `Ctrl + Shift + p`
+2. Escribimos: `Open User Settings (JSON)`
+3. Lo elegimos con las flechas del teclado y presionamos enter
+### Archivo de configuración completo
 ```json
 {
 	"editor.minimap.enabled": false,
@@ -33,5 +34,21 @@ description: 'Configuración de Visual Studio Code'
 	"editor.linkedEditing": true,
 	"workbench.iconTheme": "symbols",
 	"terminal.integrated.env.linux": {}
+}
+```
+### Explicación
+Desactivamos la telemetría de Microsoft
+```json
+{
+	"telemetry.telemetryLevel": "off",
+	"intelephense.telemetry.enabled": false,
+}
+```
+#### Otros
+Guardar automáticamente el archivo con un delay de `3000` ms que es igual a 3 segundos
+```json
+{
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 3000
 }
 ```
