@@ -8,6 +8,7 @@ const base = import.meta.env.BASE_URL;
 <div id={id}></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
+        // @ts-ignore
         new PagefindUI({ 
             element: "#search", 
             debounceTimeoutMs: 500,
@@ -18,14 +19,17 @@ const base = import.meta.env.BASE_URL;
         });
     });
 </script>
-<style is:global>
+<style is:global lang="scss">
     #search {
-        display: block !important;
+        display: flex !important;
+        margin: auto;
+        margin-top: 10px;
         z-index: 10;
         width: 100%;
-        background-color: white;
-        top: -50%;
-        max-width: 600px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        max-width: 400px;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
     }
     .pagefind-ui__drawer.svelte-e9gkc3 {
         padding-inline: 2rem !important;

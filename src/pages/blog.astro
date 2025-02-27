@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro'
 import Nav from '../components/Nav.astro'
 import ContentCard from "../components/ContentWithPost.astro"
+import SearchBar from "../components/SearchBar.astro";
 ---
 <Layout title="Blog" description='Todo el contenido sobre tecnologia'>
 	<Nav />
+	<SearchBar id="search"/>
 	<h2>Todas las publicaciones</h2>
 	<ContentCard />
 </Layout>
