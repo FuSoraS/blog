@@ -1,0 +1,59 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+
+export async function getStaticPaths(){
+    const posts = await getCollection('posts');
+
+    return posts.map((post) => ({
+        params: { id: post.slug },
+        props: { post }
+    }))
+}
+const { post }= Astro.props
+const { data, slug } = post
+const { title, description, cover } = data
+const { Content } = await render(post)
+---
+<Layout title={title} description="">
+    <Nav />
+    <div id="progress"></div>
+    <main>
+        <img src=`/blog/${cover}` alt="" class="cover">
+        <h1>{title}</h1>
+        <Content />
+    </main>
+</Layout>
+<style>
+    #progress {
+        position: fixed;
+        top: 0;
+        width: 0;
+        background-color: #ff0000;
+        height: 4px;
+        animation: progress-grow auto linear;
+        animation-timeline: scroll(root);
+    }
+    @keyframes progress-grow {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    body {
+      font-family: "Montserrat Variable", sans-serif;
+      margin: 0;
+    }
+    main {
+      margin: 0 auto;
+      max-width: fit-content;
+      padding: 1rem;
+    }
+    .cover {
+      width: 100%;
+      max-height: 300px;
+    }
+</style>
