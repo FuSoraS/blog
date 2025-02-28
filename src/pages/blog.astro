@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Nav from '../components/Nav.astro'
-import SearchBar from "../components/SearchBar.astro";
 import { getCollection } from 'astro:content';
 const posts = await getCollection('posts');
 ---
 <Layout title="Blog" description='Todo el contenido sobre tecnologia'>
 	<Nav />
-	<SearchBar id="search"/>
 	<h2>Todas las publicaciones</h2>
 	<section>
 		{
