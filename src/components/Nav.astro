@@ -1,19 +1,19 @@
 ---
-const base = import.meta.env.BASE_URL;
+import { BASE_URL } from "../config.ts";
 ---
 
 <nav>
-    <a href=`${base}` class="first">
-        <img src=`${base}/favicon.svg` alt="" class="logo" />
+    <a href=`${BASE_URL}` class="first">
+        <img src=`${BASE_URL}/favicon.svg` alt="" class="logo" />
         <p>Blog Fusoras</p>
     </a>
     <div class="second">
-        <a href=`${base}` class="center">Inicio</a>
-        <a href=`${base}/blog` class="center">Blog</a>
+        <a href=`${BASE_URL}` class="center">Inicio</a>
+        <a href=`${BASE_URL}/blog` class="center">Blog</a>
     </div>
     <div class="third">
         <a href="https://github.com/FuSoraS/blog" target="_blank" rel="noopener noreferrer">
-            <img src=`${base}/github-light.svg` alt="github" class="logo"/>
+            <img src=`${BASE_URL}/github-light.svg` alt="github" class="logo"/>
         </a>
     </div>
 </nav>

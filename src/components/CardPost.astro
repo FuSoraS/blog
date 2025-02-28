@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+import { BASE_URL } from "../config.ts";
 interface Props {
 	title: string, 
     description: string,
@@ -9,7 +9,7 @@ interface Props {
 const { title, description, image, link } = Astro.props;
 ---
 <article>
-    <a href=`${base}${link}`|>
+    <a href=`${BASE_URL}${link}`|>
         <img src={image} alt="">
         <h2>{title}</h2>
         <p>{description}</p>
