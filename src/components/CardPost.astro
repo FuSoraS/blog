@@ -10,7 +10,7 @@ const { title, description, image, link } = Astro.props;
 ---
 <article>
     <a href=`${BASE_URL}${link}`|>
-        <img src={image} alt="">
+        <img src={image} alt={title}>
         <h2>{title}</h2>
         <p>{description}</p>
     </a>
