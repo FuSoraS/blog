@@ -10,7 +10,7 @@ const posts = await getCollection('posts');
 	<h2>Nuevas Publicaciones</h2>
 	<section>
 		{
-			posts.slice(0,2).map(post => {
+			posts.slice(0,3).reverse().map(post => {
 				const { slug, data } = post;
 				const { title, description, cover } = data
 
