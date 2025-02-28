@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
 title: 'Configuración de Visual Studio Code'
 author: FuSoraS
 description: 'Configuración de Visual Studio Code'
@@ -10,7 +9,7 @@ cover: 'image-vscode.png'
 1. Presionar `Ctrl + Shift + p`
 2. Escribimos: `Open User Settings (JSON)`
 3. Lo elegimos con las flechas del teclado y presionamos enter
-### Archivo de configuración completo
+## Archivo de configuración completo
 ```json
 {
 	"editor.minimap.enabled": false,
@@ -37,7 +36,7 @@ cover: 'image-vscode.png'
 	"terminal.integrated.env.linux": {}
 }
 ```
-### Explicación
+## Explicación
 Desactivamos la telemetría de Microsoft
 ```json
 {
@@ -45,7 +44,7 @@ Desactivamos la telemetría de Microsoft
 	"intelephense.telemetry.enabled": false,
 }
 ```
-#### Otros
+### Otros
 Guardar automáticamente el archivo con un delay de `3000` ms que es igual a 3 segundos
 ```json
 {

@@ -20,12 +20,14 @@ const { Content } = await render(post)
     <Nav />
     <div id="progress"></div>
     <main>
+      <div class="container-cover">
         <img src=`/blog/${cover}` alt="" class="cover">
+      </div>
         <h1>{title}</h1>
-        <Content />
+          <Content />
     </main>
 </Layout>
-<style>
+<style is:inline>
     #progress {
         position: fixed;
         top: 0;
@@ -43,17 +45,33 @@ const { Content } = await render(post)
         width: 100%;
       }
     }
-    body {
-      font-family: "Montserrat Variable", sans-serif;
-      margin: 0;
+    h1 {
+      text-align: center;
     }
     main {
       margin: 0 auto;
-      max-width: fit-content;
+      width: fit-content;
+      max-width: 800px;
       padding: 1rem;
     }
+    main h2 {
+      font-size: 1.4rem;
+      margin: 0.75rem 0;
+    }
+    main blockquote {
+      background-color: #1c1b20da;
+      color: #948bc5;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    main pre {
+      padding: 10px;
+    }
+    .container-cover {
+      display: flex;
+      justify-content: center;
+    }
     .cover {
-      width: 100%;
       max-height: 300px;
     }
 </style>
