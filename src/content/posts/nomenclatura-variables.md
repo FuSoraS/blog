@@ -3,7 +3,7 @@ title: 'Nomenclatura para las variables'
 author: FuSoraS
 description: 'Nomenclatura como camel case, pascal case, snake case, kebab case, upper case y upper camel case'
 date: 2025-02-28
-cover: ''
+cover: 'cover-nomenclatura-v.webp'
 ---
 ## Camel case
 El **Camel Case** (o "notación de camello") es un estilo en el que la primera letra de cada palabra se escribe en mayúscula, excepto la primera palabra. Este estilo es común en muchos lenguajes de programación para nombrar variables y funciones.
@@ -14,7 +14,6 @@ El **Camel Case** (o "notación de camello") es un estilo en el que la primera
 > pass
 >```
 
-[Wikipedia Camel case](https://es.wikipedia.org/wiki/Camel_case)
 ## Pascal Case
 El **Pascal Case** es similar al Camel Case, pero en este caso, la primera letra de cada palabra, incluida la primera, se escribe en mayúscula. Este estilo se utiliza a menudo para nombrar clases.
 > Ejemplo
