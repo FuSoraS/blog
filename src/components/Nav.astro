@@ -12,6 +12,9 @@ const base = import.meta.env.BASE_URL;
         <a href=`${base}/blog` class="center">Blog</a>
     </div>
     <div class="third">
+        <a href="https://github.com/FuSoraS/blog" target="_blank" rel="noopener noreferrer">
+            <img src=`${base}/github-light.svg` alt="github" class="logo"/>
+        </a>
     </div>
 </nav>
 <style>
@@ -24,6 +27,13 @@ const base = import.meta.env.BASE_URL;
     .first .logo {
         width: 50px;
         height: 50px;
+    }
+    .third a .logo {
+        width: 30px;
+        height: 30px;
+    }
+    .third a {
+        margin-right: 20px;
     }
     .first, .second, .third {
         display: flex;
